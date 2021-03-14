@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CampaignController!{% endblock %}
+
+{% block body %}
+
+    {{ form_start(form_campaign) }}
+    <div class="row">
+        <div class="form-inline">
+            <div class="col-4">
+                {{ form_row(form_campaign.name) }}
+            </div>
+            <div class="col-4">
+                {{ form_row(form_campaign.version) }}
+            </div>
+            <div class="col-4">
+                {{ form_row(form_campaign.encodage) }}
+            </div>
+            <br>
+            <div class="col-12 text-center">
+                {{ form_row(form_campaign.commentaire) }}
+            </div>
+            <button class="btn btn-primary" type="submit">Envoyer</button>
+        </div>
+    </div>
+    {{ form_end(form_campaign) }}
+
+{% endblock %}

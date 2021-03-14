@@ -10,6 +10,7 @@
         "composer/package-versions-deprecated": "1.11.99.1",
         "doctrine/annotations": "^1.0",
         "doctrine/doctrine-bundle": "^2.2",
+        "doctrine/doctrine-fixtures-bundle": "^3.4",
         "doctrine/doctrine-migrations-bundle": "^3.0",
         "doctrine/orm": "^2.8",
         "phpdocumentor/reflection-docblock": "^5.2",
@@ -75,6 +76,14 @@
         "symfony/polyfill-php72": "*"
     },
     "scripts": {
+        "prepare": [
+            "php bin/console d:d:drop --if-exists -f",
+            "php bin/console d:d:create ",
+            "php bin/console d:s:update -f"
+        ],
+        "cacl" : [
+            "php bin/console c:c"
+        ],
         "auto-scripts": {
             "cache:clear": "symfony-cmd",
             "assets:install %PUBLIC_DIR%": "symfony-cmd"
