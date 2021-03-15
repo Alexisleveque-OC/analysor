@@ -33,6 +33,7 @@ class CampaignController extends AbstractController
      */
     public function createCampaign(Request $request, CampaignCreate $campaignCreate): Response
     {
+        dump('tata');
         $formCampaign = $this->createForm(CampaignType::class);
         $formCampaign->handleRequest($request);
 

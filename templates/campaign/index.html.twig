@@ -4,7 +4,7 @@
 
 {% block body %}
 
-    {{ form_start(form_campaign) }}
+    {{ form_start(form_campaign, {'action' : path('new_campaign')}) }}
     <div class="row">
         <div class="form-inline">
             <div class="col-4">
